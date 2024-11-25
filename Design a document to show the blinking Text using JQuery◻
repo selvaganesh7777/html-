@@ -1,0 +1,34 @@
+Level 2: Design a document to show the blinking Text using JQuery◻ 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Blinking Text Example</title> 
+<style> 
+    .blinking { 
+        animation: blinker 1s linear infinite; 
+    } 
+    @keyframes blinker { 
+        50% { 
+            opacity: 0; 
+        } 
+    } 
+</style> 
+</head> 
+<body> 
+ 
+<h1 id="blinkingText">Hello, I'm Blinking!</h1> 
+ 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script> 
+    $(document).ready(function() { 
+        function blinkText() { 
+            $('#blinkingText').toggleClass('blinking'); 
+        } 
+        setInterval(blinkText, 1000); // Toggle every second (1000 milliseconds) 
+    }); 
+</script> 
+ 
+</body> 
+</html>
