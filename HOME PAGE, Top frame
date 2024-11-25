@@ -1,0 +1,213 @@
+Eureka Info Solutions has acquired online shoping cart project from a leading bookseller in Bangalore. 
+They want to sell engineering textbooks online, so you are the team leader of the project and divide the 
+modules based on user requirement, given requirement/module is designed by developers, and finally you 
+integrate all the modules into one static website using HTML 
+The web site should be having following things: 
+1. HOME PAGE: The static home page must contain three frames. 
+• Top frame:- top of the page to place PU banner and links to homepage, login page, 
+registration page and catalogue page. 
+• Left frame:- at least four links for navigation which will display the catalogue of Respective 
+links. 
+• Right frame:- the pages to links in the left frame must be loaded here initially it Contains the 
+description of the website. 
+2) LOGIN PAGE – to get username and password 
+3) CATOLOGUE PAGE: The catalogue page should contain the details of all the books available 
+in the web site in a table. 
+4) REGISTRATION PAGE – to get user details 
+ 
+ 
+HTML Tags used: 
+<html> <head> <title> <body> <h1> <h2> <h3> <a> < img> <form> < input> <textarea> <select> 
+<option> <h4> <p> <center> <hr> <table> <tr> <th> <td> <br> <font> < button > <fieldset> 
+<frame><frameset> 
+Solution: 
+top.html 
+<html> 
+<body bgcolor="YellowGreen "> 
+<center> 
+<marquee bgcolor="yellow" width="650" behavior="alternate"> 
+<font face="Bookman Old Style" size="8" color="green"><b><i>PU 
+Online Book Store</i></b> 
+</font> 
+</marquee> <br> 
+<font face="Bookman Old Style" size="3" color="white"><b>Created 
+& Maintained by Presidency University</b></font> 
+</center> 
+<br> 
+<table width="100%" height="50%" cellspacing=10><tr align="center"> 
+<td> <a href="Home.html" target="_parent"> 
+<font face="Brush Script" size="6" color="navy">HOME </a> </td> 
+<td> <a href="login.html" target="rightframe"> 
+<font face="Brush Script" size="6" color="navy">LOGIN</a> </td> 
+<td> <a href="registration.html" target="rightframe"> 
+<font face="Brush Script" size="6" color="navy">REGISTER </a> </td> 
+<td> <a href="catalogue.html" target="leftframe"> 
+<font face="Brush Script" size="6" color="navy">CATALOGUE</a> </td> 
+</tr> 
+</table> 
+</body> 
+</html> 
+ 
+ 
+left.html 
+<html> 
+<body align="center" bgcolor="bisque"> <br> 
+<img src="ebook.png" width="200" height="400"/><br><br> 
+</body> 
+</html> 
+right.html 
+<html> 
+<body bgcolor="orange"> 
+<center> 
+<img src="D:\WT\image\PUlogo.jpg" height="170"><br> 
+<font face="Bookman Old Style" size="5" color="blue"> 
+<h1><b>Welcome to the Online Book Store!!!</b></font><br /> 
+<font face="Bookman Old Style" size="5" color="red"> 
+<h2><b> "A Huge Collection Of Engineering E-Books"</b> </h2> </font> 
+</center> 
+</body> 
+</html> 
+ 
+home.html 
+<frameset rows="30%,*"> 
+<frame src="top.html" name="topframe"> 
+<frameset cols="15%,*"> 
+<frame src="left.html" name="leftframe"> 
+<frame src="right.html" noresize name="rightframe" > 
+</frameset> 
+login.html: 
+<html> 
+<body bg color="pink"> 
+<basefont face="Cambria" size="4"> <br> 
+<center> 
+<font face="Bookman Old Style" size="7" color="purple"> 
+<b>Enter Login Details:</b> 
+</font> 
+</center> 
+<form name="f1" method="post" action="right.html"> 
+<table align="center" width="100" height="150" cellspacing=”15”> 
+<tr><td><b>Login ID:</b></td> 
+<td><input type="text" name="t1"></td> 
+</tr> 
+<tr> 
+<td><b>Password:</b></td> 
+<td><input type="password" name="t2"></td> 
+</tr> 
+<tr align="center"> 
+<td><input type="submit" name="b1" value="Submit"></td> 
+<td><input type="reset" name="b2" value="Reset"></td> 
+</tr> 
+</table> </form> </basefont> </body> 
+</html> Registration.html 
+<html> 
+<head><title>Registration Form</title></head> 
+<body bgcolor="#E4F0F8"> 
+<center><font color="blue" size="6" face="arial">Registration Form 
+</font> </center><br /> 
+<form action="right.html"> 
+First Name(Minimum 6 characters)<font color="red">* </font> 
+<input type='text' id='firstname' /><br /><br /> 
+Last Name<font color="red"><font color="red">* </font> </font> 
+<input type='text' id='lastname' /><br /><br 
+/> EmailAddress<font color="red">* 
+</font> 
+<input type='text' id='email' /><br /> 
+<font color="red">(one e-mail id only):</font> 
+<font color="redblue">e.g. smith@hotmail.com</font><br /><br/> 
+Password(minimum 6 characters)<font color="red">* </font> 
+<input type='password' id='pass'><br /><br/> 
+Address<font color="red">* </font> 
+<textarea rows="2" cols="20" id='addr' /></textarea> <br /> <br/> 
+Mobile No<font color="red">* </font> 
+<input type='text' id='mobileno' /><br /> 
+Gender: <input type='radio' name="gender">male 
+<input type='radio' name="gender">female<br/><br /> 
+<input type='Submit' value='submit' /> 
+<input type='Reset' value='reset' /> 
+</form> </body> </html> 
+ 
+ 
+ 
+ 
+ 
+ 
+catalogue.html 
+<html> 
+<body align="center" bgcolor="bisque"> <br> 
+<a href="cse.html" target="rightframe"><font size="6">CSE</font> </a> 
+<br><br> 
+<a href="ece.html" target="rightframe"><font size="6">ECE</font></a> 
+<br><br> 
+<a href="it1.html" target="rightframe"><font size="6">IT</font></a> 
+<br><br> 
+<a href="eee.html" target="rightframe"><font size="6">EEE</font></a> 
+<br><br> 
+<a href="mech.html" target="rightframe"><font size="6">MECH</font></a> 
+<br> 
+</body> 
+</html> 
+ 
+ 
+cse.html 
+<html> 
+<body bgcolor="Plum"> 
+<h1><font color="blue">COMPUTER SCIENCE ENGINEERING </font></h1> 
+<h2> 
+<ul type="square"> 
+<li><a href="DataStructures.html"/>Data Structures using Python</a> 
+</li> 
+<li>Web Technologies</li> <li>Linux Programming</li> 
+<li>Artificial Intelligence</li> 
+</ul> 
+</h2> 
+</body> 
+</html> 
+ 
+ 
+ 
+DataStructures.html 
+<html> 
+<body bgcolor="pink"> 
+<form action="order.html"> 
+<table border="1" width="100%"> 
+<tr> <th> <img src="D:\WT\image\data-structures-using
+python.webp" width=100 height=100/> </th> 
+<th> Book: Data Structures using Python <br> Author: Vasudevan Shriram K 
+<br> Publication:Oxford Oxford Press</th> <th>531 </th> 
+<th> <input type="submit" value="Add to cart"/></th> </tr> 
+<tr> 
+<th> <img src="D:\WT\image\Data-Structures-And-Algorithms-In-Python.jpg" 
+width=100 height=100/></th> 
+<th> Book: Data Structures And Algorithms In Python <br> Author:Michael 
+T. Goodrich, Roberto Tamassia <br> Publication: Wiley India</th> 
+<th> 898 </th> 
+<th> <input type="submit" value="Add to cart"/></th> </tr> 
+</table> 
+</form> 
+</body> 
+</html> 
+ 
+order.html 
+<html> 
+<head><title>order conformation</title></head> 
+<body bgcolor="cyan"> 
+<center> 
+<pre><strong> 
+<b>Your order Is Conformed 
+</strong></pre> 
+<h2><b>THANK YOU...Visit Again</h2> 
+</center> 
+</body></html> 
+ece.html 
+<html> 
+<body bgcolor="Plum"> 
+<h1><font color="blue">Electronics and Communication Engineering</font> 
+</h1> 
+<h2> 
+<ul> 
+<li>Digital Circuits</li> <li>Signals and Systems</li> <li>Digital 
+Communication</li> 
+</ul> 
+</h2> 
+</body> 
+</html>
