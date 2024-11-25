@@ -1,0 +1,184 @@
+Experiment No. 3: Application of CSS in web designing 
+Level 1: Design a document using HTML and CSS to create a catalog of items for online 
+shopping. 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Online Shopping Catalog</title> 
+  <style> 
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      padding: 20px; 
+      background-color: #f2f2f2; 
+    } 
+    .container { 
+      max-width: 800px; 
+      margin: auto; 
+      background-color: #fff; 
+      border-radius: 10px; 
+      padding: 20px; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    } 
+    table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      margin-bottom: 20px; 
+    } 
+    th, td { 
+      padding: 10px; 
+      text-align: left; 
+      vertical-align: middle; 
+    } 
+    th { 
+      background-color: #f2f2f2; 
+      font-weight: bold; 
+    } 
+    tr:nth-child(even) { 
+      background-color: #f9f9f9; 
+    } 
+    .image-column { 
+      width: 20%; 
+    } 
+    .price-column { 
+      width: 15%; 
+    } 
+    .button-column { 
+      width: 15%; 
+    } 
+    .button { 
+      background-color: #4CAF50; 
+      color: white; 
+      padding: 8px 12px; 
+      border: none; 
+      cursor: pointer; 
+      border-radius: 5px; 
+    } 
+    .button:hover { 
+      background-color: #45a049; 
+    } 
+    form { 
+      margin-top: 20px; 
+    } 
+    label { 
+      display: block; 
+      margin-bottom: 5px; 
+    } 
+    input[type="text"], 
+    input[type="email"], 
+    textarea { 
+      width: 100%; 
+      padding: 8px; 
+      border: 1px solid #ccc; 
+      border-radius: 5px; 
+      margin-bottom: 10px; 
+      box-sizing: border-box; 
+    } 
+    input[type="submit"] { 
+      background-color: #008cba; 
+      color: white; 
+      padding: 10px 20px; 
+      border: none; 
+      cursor: pointer; 
+      border-radius: 5px; 
+      transition: background-color 0.3s; 
+    } 
+    input[type="submit"]:hover { 
+      background-color: #005f6b; 
+    } 
+ .add-to-cart-btn:hover { 
+      background-color: #45a049; 
+    } 
+    .cart-message { 
+      background-color: #4CAF50; 
+      color: white; 
+      padding: 10px; 
+      margin-top: 20px; 
+      border-radius: 5px; 
+      display: none; 
+    } 
+  
+ .add-to-cart-btn { 
+      background-color: #4CAF50; 
+      color: white; 
+      border: none; 
+      padding: 8px 16px; 
+      border-radius: 5px; 
+      cursor: pointer;  
+      transition: background-color 0.3s ease; 
+    } 
+  </style> 
+</head> 
+<body> 
+ 
+<div class="container"> 
+  <table> 
+    <thead> 
+      <tr> 
+        <th>Image</th> 
+        <th>Title</th> 
+        <th>Description</th> 
+        <th>Price</th> 
+        <th>Action</th> 
+      </tr> 
+    </thead> 
+    <tbody> 
+      <tr class="item"> 
+        <td><img src="item1.jpg" alt="Item 1"></td> 
+        <td>Item 1</td> 
+        <td>Description of item 1.</td> 
+        <td>$10.99</td> 
+        <td><button class="add-to-cart-btn">Add to Cart</button></td> 
+      </tr> 
+      <tr class="item"> 
+        <td><img src="item2.jpg" alt="Item 2"></td> 
+        <td>Item 2</td> 
+        <td>Description of item 2.</td> 
+        <td>$19.99</td> 
+        <td><button class="add-to-cart-btn">Add to Cart</button></td> 
+      </tr> 
+      <!-- Add more items as needed --> 
+    </tbody> 
+  </table> 
+ 
+  <div class="cart-message" id="cartMessage"> 
+    Item added to cart successfully! 
+  </div> 
+ 
+  <h2>Order Form</h2> 
+  <form id="orderForm"> 
+    <label for="name">Name:</label> 
+    <input type="text" id="name" name="name" required><br><br> 
+    <label for="email">Email:</label> 
+    <input type="email" id="email" name="email" required><br><br> 
+    <label for="address">Address:</label> 
+    <textarea id="address" name="address" required></textarea><br><br> 
+    <button class="add-to-cart-btn" type="submit">Place Order</button> 
+  </form> 
+</div> 
+ 
+<script> 
+  const addToCartButtons = document.querySelectorAll('.add-to-cart-btn'); 
+  const cartMessage = document.getElementById('cartMessage'); 
+ 
+  addToCartButtons.forEach(button => { 
+    button.addEventListener('click', () => { 
+      cartMessage.style.display = 'block'; 
+      setTimeout(() => { 
+        cartMessage.style.display = 'none'; 
+      }, 2000); 
+    }); 
+  }); 
+ 
+  const orderForm = document.getElementById('orderForm'); 
+  orderForm.addEventListener('submit', function(event) { 
+    event.preventDefault(); 
+    alert('Order placed successfully!'); 
+    this.reset(); 
+  }); 
+</script> 
+ 
+</body> 
+</html>
